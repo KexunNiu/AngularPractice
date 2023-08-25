@@ -13,7 +13,7 @@ import { PostsService } from '../posts.service';
 export class PostListComponent implements OnInit, OnDestroy{
     posts: Post[] = [];
     // bug here, need to be fixed
-    // private postsSub: Subscription;
+    private postsSub = new Subscription();
 
     constructor(public postsService: PostsService) {}
 
